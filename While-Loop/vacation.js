@@ -7,7 +7,7 @@ function calculationsVacation(input) {
 
     while(availableMoney < moneyNeeded) {
         let action = input[index++];
-        let currentAmount = input[index++];
+        let currentAmount = Number(input[index++]);
         daysCount++;
         if (action === "spend") {
             if (availableMoney < currentAmount) {
