@@ -1,24 +1,19 @@
-function traveling(input) {
-    let index = 2;
-    let destination = input[0];
-    let minBudget = Number(input[1]);
-    let savingsCounter = 0;
-    
-    while(input[index] !== "End") {
-        let currentAmmount = Number(input[index]);
-        savingsCounter += currentAmmount;
-        if (savingsCounter >= minBudget) {
-            console.log(`Going to ${destination}!`);
-            index++;
-            destination = input[index];
-            index++;
-            minBudget = input[index];
-            savingsCounter = 0;
-            continue;
+function solve(input) {
+    let destination = "";
+    while (destination !== "End") {
+        destination = input.shift();
+        let priceDestination = Number(input.shift());
+        let saving = 0;
+        for (let savingTotal = 0; savingTotal < priceDestination;) {
+            saving = Number(input.shift());
+            savingTotal += saving;
+            if (savingTotal >= priceDestination) {
+                console.log(`Going to ${destination}!`)
+            }
         }
-        index++;
     }
 }
+
 traveling(["Greece",
 "1000",
 "200",
