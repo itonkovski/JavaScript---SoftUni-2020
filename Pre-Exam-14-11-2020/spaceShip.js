@@ -9,10 +9,10 @@ function solve(width, length, hight, averageAustronautsHights) {
     if (availablePlace >= 3 && availablePlace <= 10) {
         console.log(`The spacecraft holds ${availablePlace} astronauts.`);
     }
-    else if (availablePlace < 3){
-        console.log("The spacecraft is too small");
+    if (availablePlace < 3){
+        console.log("The spacecraft is too small.");
     }
-    else if (availablePlace > 10){
+    if (availablePlace > 10){
         console.log("The spacecraft is too big.");
     }
 }
