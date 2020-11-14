@@ -37,6 +37,9 @@ function solve(input) {
         totalMoneyRaised += 0.2 * totalMoneyRaised;
         console.log(`You won the tournament! Total raised money: ${totalMoneyRaised.toFixed(2)}`);
     }
+    else {
+        console.log(`You lost the tournament! Total raised money: ${totalMoneyRaised.toFixed(2)}`);
+    }
 }
 solve(["2",
 "volleyball",
